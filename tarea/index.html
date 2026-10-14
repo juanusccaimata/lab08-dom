@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Tareas Interactivas</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; max-width: 500px; margin: auto; }
+    form { display: flex; gap: 10px; margin-bottom: 20px; }
+    input[type="text"] { flex: 1; padding: 8px; }
+    ul { list-style: none; padding: 0; }
+    li { background: #f4f4f4; padding: 10px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center; border-radius: 4px; }
+    li.completada span { text-decoration: line-through; color: gray; }
+    .btn-completar { background: #4CAF50; color: white; border: none; padding: 5px 10px; cursor: pointer; margin-right: 5px; }
+    .btn-eliminar { background: #f44336; color: white; border: none; padding: 5px 10px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Lista de Tareas</h1>
+  <form id="formTarea">
+    <input type="text" id="inputTarea" placeholder="Nueva tarea..." required>
+    <button type="submit">Agregar</button>
+  </form>
+
+  <p>Tareas pendientes: <span id="contadorPendientes">0</span></p>
+  <ul id="listaTareas"></ul>
+
+  <script src="app.js"></script>
+</body>
+</html>
